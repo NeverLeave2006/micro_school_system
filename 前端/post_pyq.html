@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<!--App自定义的css-->
+		<!--<link rel="stylesheet" type="text/css" href="css/app.css" />-->
+		<link rel="stylesheet" href="css/header.css" />
+		<style>
+			.pic_holder {
+				width: 100px;
+				height: 100px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav title">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color: white;"></a>
+
+			<h1 class="mui-title title-color"><b>发布新的动态</b></h1>
+		</header>
+		<div class="mui-content">
+			<div class="mui-input-row" style="margin: 10px 5px;">
+				<textarea id="textarea" rows="5" placeholder="说点什么吧"></textarea>
+				<div id="imgs" style="margin: 0px 5px;">
+					<a class="mui-icon mui-icon-image"></a>
+				</div>
+				<img id="pic_holder" />
+			</div>
+			<button id="post" type="button" class="mui-btn mui-btn-blue mui-btn-block">发布</button>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+		<script>
+			mui.init();
+
+			mui.plusReady(function() {
+				var user = app.getUserGlobalInfo(); //获取全局用户信息
+				console.log(JSON.stringify(user));
+				var pic_path = ""; //获取图片路径
+				var textarea = document.getElementById("textarea");
+				var imgBase64 = "";
+
+				document.getElementById("imgs").addEventListener("tap", function() {
+					console.log("从相册中选择图片:");
+					plus.gallery.pick(function(path) {
+						console.log(path);
+						pic_path = path;
+						getBase64(pic_path)
+							.then(function(base64) {
+								imgBase64 = base64;
+								console.log(base64); //处理成功打印在控制台
+							}, function(err) {
+								console.log(err); //打印异常信息
+							});
+						var pic_holder = document.getElementById("pic_holder");
+						pic_holder.src = path;
+						pic_holder.classList.add("pic_holder");
+						console.log("移除图标");
+						document.getElementById("imgs").style.display = "none";
+						console.log(textarea.value);
+					}, function(e) {
+						console.log("取消选择图片");
+					}, {
+						filter: "image"
+					});
+				});
+
+				//传入图片路径，返回base64
+				function getBase64(img) {
+					function getBase64Image(img, width, height) { //width、height调用时传入具体像素值，控制大小 ,不传则默认图像大小
+						var canvas = document.createElement("canvas");
+						canvas.width = width ? width : img.width;
+						canvas.height = height ? height : img.height;
+
+						var ctx = canvas.getContext("2d");
+						ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+						var dataURL = canvas.toDataURL();
+						return dataURL;
+					}
+					var image = new Image();
+					image.crossOrigin = '';
+					image.src = img;
+					var deferred = $.Deferred();
+					if(img) {
+						image.onload = function() {
+							deferred.resolve(getBase64Image(image)); //将base64传给done上传处理
+						}
+						return deferred.promise(); //问题要让onload完成后再return sessionStorage['imgTest']
+					}
+				}
+
+				var post = document.getElementById("post");
+				post.addEventListener("tap", function() {
+					if(!app.isNotNull(pic_path) && !app.isNotNull(textarea.value)) {
+						app.showToast("您没有发任何东西", "error");
+						return false;
+					}
+					plus.nativeUI.showWaiting("请稍后...");
+					mui.ajax(app.serverUrl + "/p/post_pyq", {
+						data: {
+							poster: user.id,
+							msg: textarea.value,
+							imgData: imgBase64
+						},
+						dataType: 'json', //服务器返回json格式数据
+						type: 'post', //HTTP请求类型
+						timeout: 30000, //超时时间设置为30秒；
+						headers: {
+							'Content-Type': 'application/json'
+						},
+						success: function(data) {
+							//服务器返回响应
+							plus.nativeUI.closeWaiting();
+
+							if(data.status == 200) {
+								app.showToast("发布成功", "success");
+								plus.webview.currentWebview().reload(true);
+
+							} else {
+								app.showToast(data.msg, "error");
+							}
+						}
+					});
+				});
+			});
+		</script>
+	</body>
+
+</html>

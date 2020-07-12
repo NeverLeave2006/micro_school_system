@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sgj.microschoolsystem.mapper.ManagerTableMapper">
+  <resultMap id="BaseResultMap" type="com.sgj.microschoolsystem.model.ManagerTable">
+    <!--@mbg.generated generated on Tue May 28 18:44:11 CST 2019.-->
+    <id column="manager_id" jdbcType="VARCHAR" property="managerId" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="shcool_name" jdbcType="VARCHAR" property="shcoolName" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated generated on Tue May 28 18:44:11 CST 2019.-->
+    delete from manager_table
+    where manager_id = #{managerId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.sgj.microschoolsystem.model.ManagerTable">
+    <!--@mbg.generated generated on Tue May 28 18:44:11 CST 2019.-->
+    insert into manager_table (manager_id, name, shcool_name
+      )
+    values (#{managerId,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{shcoolName,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.sgj.microschoolsystem.model.ManagerTable">
+    <!--@mbg.generated generated on Tue May 28 18:44:11 CST 2019.-->
+    update manager_table
+    set name = #{name,jdbcType=VARCHAR},
+      shcool_name = #{shcoolName,jdbcType=VARCHAR}
+    where manager_id = #{managerId,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated generated on Tue May 28 18:44:11 CST 2019.-->
+    select manager_id, name, shcool_name
+    from manager_table
+    where manager_id = #{managerId,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    <!--@mbg.generated generated on Tue May 28 18:44:11 CST 2019.-->
+    select manager_id, name, shcool_name
+    from manager_table
+  </select>
+</mapper>

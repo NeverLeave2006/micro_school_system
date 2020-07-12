@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sgj.microschoolsystem.mapper.PyqMapper">
+  <resultMap id="BaseResultMap" type="com.sgj.microschoolsystem.model.Pyq">
+    <!--@mbg.generated generated on Thu May 09 18:37:31 CST 2019.-->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="poster_id" jdbcType="VARCHAR" property="posterId" />
+    <result column="msg" jdbcType="VARCHAR" property="msg" />
+    <result column="picture_small" jdbcType="VARCHAR" property="pictureSmall" />
+    <result column="picture" jdbcType="VARCHAR" property="picture" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="like_count" jdbcType="INTEGER" property="likeCount" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated generated on Thu May 09 18:37:31 CST 2019.-->
+    delete from pyq
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.sgj.microschoolsystem.model.Pyq">
+    <!--@mbg.generated generated on Thu May 09 18:37:31 CST 2019.-->
+    insert into pyq (id, poster_id, msg, 
+      picture_small, picture, create_time, 
+      like_count)
+    values (#{id,jdbcType=VARCHAR}, #{posterId,jdbcType=VARCHAR}, #{msg,jdbcType=VARCHAR}, 
+      #{pictureSmall,jdbcType=VARCHAR}, #{picture,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{likeCount,jdbcType=INTEGER})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.sgj.microschoolsystem.model.Pyq">
+    <!--@mbg.generated generated on Thu May 09 18:37:31 CST 2019.-->
+    update pyq
+    set poster_id = #{posterId,jdbcType=VARCHAR},
+      msg = #{msg,jdbcType=VARCHAR},
+      picture_small = #{pictureSmall,jdbcType=VARCHAR},
+      picture = #{picture,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      like_count = #{likeCount,jdbcType=INTEGER}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated generated on Thu May 09 18:37:31 CST 2019.-->
+    select id, poster_id, msg, picture_small, picture, create_time, like_count
+    from pyq
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    <!--@mbg.generated generated on Thu May 09 18:37:31 CST 2019.-->
+    select id, poster_id, msg, picture_small, picture, create_time, like_count
+    from pyq
+  </select>
+</mapper>

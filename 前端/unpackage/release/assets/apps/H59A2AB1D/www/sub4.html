@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="css/mui.min.css">
+		<style>
+			html,
+			body {
+				background-color: #efeff4;
+			}
+			
+			.mui-views,
+			.mui-view,
+			.mui-pages,
+			.mui-page,
+			.mui-page-content {
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #efeff4;
+			}
+			
+			.mui-pages {
+				top: 46px;
+				height: auto;
+			}
+			
+			.mui-scroll-wrapper,
+			.mui-scroll {
+				background-color: #efeff4;
+			}
+			
+			.mui-page.mui-transitioning {
+				-webkit-transition: -webkit-transform 300ms ease;
+				transition: transform 300ms ease;
+			}
+			
+			.mui-page-left {
+				-webkit-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+			}
+			
+			.mui-ios .mui-page-left {
+				-webkit-transform: translate3d(-20%, 0, 0);
+				transform: translate3d(-20%, 0, 0);
+			}
+			
+			.mui-navbar {
+				position: fixed;
+				right: 0;
+				left: 0;
+				z-index: 10;
+				height: 44px;
+				background-color: #f7f7f8;
+			}
+			
+			.mui-navbar .mui-bar {
+				position: absolute;
+				background: transparent;
+				text-align: center;
+			}
+			
+			.mui-android .mui-navbar-inner.mui-navbar-left {
+				opacity: 0;
+			}
+			
+			.mui-ios .mui-navbar-left .mui-left,
+			.mui-ios .mui-navbar-left .mui-center,
+			.mui-ios .mui-navbar-left .mui-right {
+				opacity: 0;
+			}
+			
+			.mui-navbar .mui-btn-nav {
+				-webkit-transition: none;
+				transition: none;
+				-webkit-transition-duration: .0s;
+				transition-duration: .0s;
+			}
+			
+			.mui-navbar .mui-bar .mui-title {
+				display: inline-block;
+				width: auto;
+			}
+			
+			.mui-page-shadow {
+				position: absolute;
+				right: 100%;
+				top: 0;
+				width: 16px;
+				height: 100%;
+				z-index: -1;
+				content: '';
+			}
+			
+			.mui-page-shadow {
+				background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, .01) 50%, rgba(0, 0, 0, .2) 100%);
+				background: linear-gradient(to right, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, .01) 50%, rgba(0, 0, 0, .2) 100%);
+			}
+			
+			.mui-navbar-inner.mui-transitioning,
+			.mui-navbar-inner .mui-transitioning {
+				-webkit-transition: opacity 300ms ease, -webkit-transform 300ms ease;
+				transition: opacity 300ms ease, transform 300ms ease;
+			}
+			
+			.mui-page {
+				display: none;
+			}
+			
+			.mui-pages .mui-page {
+				display: block;
+			}
+			
+			.mui-page .mui-table-view:first-child {
+				margin-top: 15px;
+			}
+			
+			.mui-page .mui-table-view:last-child {
+				margin-bottom: 30px;
+			}
+			
+			.mui-table-view {
+				margin-top: 20px;
+			}
+			
+			.mui-table-view span.mui-pull-right {
+				color: #999;
+			}
+			
+			.mui-table-view-divider {
+				background-color: #efeff4;
+				font-size: 14px;
+			}
+			
+			.mui-table-view-divider:before,
+			.mui-table-view-divider:after {
+				height: 0;
+			}
+			
+			.head {
+				height: 40px;
+			}
+			
+			#head {
+				line-height: 40px;
+			}
+			
+			.head-img {
+				width: 40px;
+				height: 40px;
+			}
+			
+			#head-img1 {
+				position: absolute;
+				bottom: 10px;
+				right: 40px;
+				width: 40px;
+				height: 40px;
+			}
+			
+			.update {
+				font-style: normal;
+				color: #999999;
+				margin-right: -25px;
+				font-size: 15px
+			}
+			
+			.mui-fullscreen {
+				position: fixed;
+				z-index: 20;
+				background-color: #000;
+			}
+			
+			.mui-ios .mui-navbar .mui-bar .mui-title {
+				position: static;
+			}
+			/*问题反馈在setting页面单独的css*/
+			
+			#feedback .mui-popover {
+				position: fixed;
+			}
+			
+			#feedback .mui-table-view:last-child {
+				margin-bottom: 0px;
+			}
+			
+			#feedback .mui-table-view:first-child {
+				margin-top: 0px;
+			}
+			
+			.mui-plus.mui-plus-stream .mui-stream-hidden {
+				display: none !important;
+			}
+			/*问题反馈在setting页面单独的css==end*/
+		</style>
+		<link rel="stylesheet" type="text/css" href="css/feedback.css" />
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-media">
+					<a id="link_myface" href="javascript:;">
+						<span class="mui-pull-right mui-icon mui-icon-arrowright" style="line-height: 42px;color: lightgray;margin-left: 3px;"></span>
+						<img id="img_my_face" class="mui-media-object mui-pull-right" src="images/logo.png">
+						<div class="mui-media-body" style="line-height:42px;font-size: 16px;">
+							头像
+
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<span class="mui-pull-right mui-icon mui-icon-arrowright" style="color: lightgray;margin-left: 3px;"></span>
+						<span id="span_nickname" class="mui-pull-right" style="color: gray;font-size: 14px;line-height: 23px;"></span>
+						<div class="mui-media-body">
+							昵称
+
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<span id="span_username" class="mui-pull-right" style="color: gray;font-size: 14px;"></span>
+						<div class="mui-media-body">
+							账号
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<span class="mui-pull-right mui-icon mui-icon-arrowright" style="color: lightgray;margin-left: 3px;"></span>
+						<img class="mui-media-object mui-pull-right" src="images/qrcode.png" style="max-width: 20px;height: 20px;">
+						<div class="mui-media-body">
+							我的二维码
+
+						</div>
+					</a>
+				</li>
+			</ul>
+			<br />
+			<ul class="mui-table-view">
+
+				<li class="mui-table-view-cell mui-media" style="text-align: center;">
+					<div class="mui-media-body">
+						退出登录
+					</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+	</body>
+	<script src="js/mui.min.js "></script>
+	<script src="js/mui.view.js "></script>
+	<script src='js/feedback.js'></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script>
+		mui.plusReady(function() {
+			//获取当前webview,刷新当前用户信息
+			var meWebview = plus.webview.currentWebview();
+			meWebview.addEventListener("show",
+				function() {
+					refreshUserInfo()
+				});
+				
+			//页面跳转，我的头像
+			var link_myface=document.getElementById("link_myface");
+			link_myface.addEventListener("tap",function(){
+				mui.openWindow("myface.html","myface.html");
+			});
+		});
+
+		function refreshUserInfo() {
+			var user = app.getUserGlobalInfo();
+			if(user != null) {
+				console.log(JSON.stringify(user));
+				var faceImage = user.faceImage;
+				var nickname = user.nickname;
+				var username = user.username;
+
+				var span_nickname = document.getElementById("span_nickname");
+				var span_username = document.getElementById("span_username");
+
+				span_nickname.innerHTML = nickname;
+				span_username.innerHTML = username;
+
+				if(app.isNotNull(faceImage)) {
+					var mg_my_face = document.getElementById("img_my_face");
+					img_my_face = faceImage;
+				}
+			}
+
+		}
+	</script>
+
+</html>

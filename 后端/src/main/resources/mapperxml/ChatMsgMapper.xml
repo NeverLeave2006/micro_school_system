@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sgj.microschoolsystem.mapper.ChatMsgMapper">
+  <resultMap id="BaseResultMap" type="com.sgj.microschoolsystem.model.ChatMsg">
+    <!--@mbg.generated generated on Sat May 04 18:59:52 CST 2019.-->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="send_user_id" jdbcType="VARCHAR" property="sendUserId" />
+    <result column="accept_user_id" jdbcType="VARCHAR" property="acceptUserId" />
+    <result column="msg" jdbcType="VARCHAR" property="msg" />
+    <result column="sign_flag" jdbcType="INTEGER" property="signFlag" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated generated on Sat May 04 18:59:52 CST 2019.-->
+    delete from chat_msg
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.sgj.microschoolsystem.model.ChatMsg">
+    <!--@mbg.generated generated on Sat May 04 18:59:52 CST 2019.-->
+    insert into chat_msg (id, send_user_id, accept_user_id, 
+      msg, sign_flag, create_time
+      )
+    values (#{id,jdbcType=VARCHAR}, #{sendUserId,jdbcType=VARCHAR}, #{acceptUserId,jdbcType=VARCHAR}, 
+      #{msg,jdbcType=VARCHAR}, #{signFlag,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.sgj.microschoolsystem.model.ChatMsg">
+    <!--@mbg.generated generated on Sat May 04 18:59:52 CST 2019.-->
+    update chat_msg
+    set send_user_id = #{sendUserId,jdbcType=VARCHAR},
+      accept_user_id = #{acceptUserId,jdbcType=VARCHAR},
+      msg = #{msg,jdbcType=VARCHAR},
+      sign_flag = #{signFlag,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated generated on Sat May 04 18:59:52 CST 2019.-->
+    select id, send_user_id, accept_user_id, msg, sign_flag, create_time
+    from chat_msg
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    <!--@mbg.generated generated on Sat May 04 18:59:52 CST 2019.-->
+    select id, send_user_id, accept_user_id, msg, sign_flag, create_time
+    from chat_msg
+  </select>
+
+  <select id="getUnreadMsgList" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select id, send_user_id, accept_user_id, msg, sign_flag, create_time
+    from chat_msg
+    <where>
+        accept_user_id=#{acceptUserId}
+      and
+        sign_flag=0
+
+    </where>
+  </select>
+</mapper>

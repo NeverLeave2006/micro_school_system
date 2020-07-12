@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sgj.microschoolsystem.mapper.PageantLikeMapper">
+  <resultMap id="BaseResultMap" type="com.sgj.microschoolsystem.model.PageantLike">
+    <!--@mbg.generated generated on Mon Jun 03 05:05:30 CST 2019.-->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="pageant_id" jdbcType="VARCHAR" property="pageantId" />
+    <result column="liker_id" jdbcType="VARCHAR" property="likerId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated generated on Mon Jun 03 05:05:30 CST 2019.-->
+    delete from pageant_like
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.sgj.microschoolsystem.model.PageantLike">
+    <!--@mbg.generated generated on Mon Jun 03 05:05:30 CST 2019.-->
+    insert into pageant_like (id, pageant_id, liker_id, 
+      create_time)
+    values (#{id,jdbcType=VARCHAR}, #{pageantId,jdbcType=VARCHAR}, #{likerId,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.sgj.microschoolsystem.model.PageantLike">
+    <!--@mbg.generated generated on Mon Jun 03 05:05:30 CST 2019.-->
+    update pageant_like
+    set pageant_id = #{pageantId,jdbcType=VARCHAR},
+      liker_id = #{likerId,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated generated on Mon Jun 03 05:05:30 CST 2019.-->
+    select id, pageant_id, liker_id, create_time
+    from pageant_like
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    <!--@mbg.generated generated on Mon Jun 03 05:05:30 CST 2019.-->
+    select id, pageant_id, liker_id, create_time
+    from pageant_like
+  </select>
+  <select id="countVoter" resultType="integer">
+    <!--@mbg.generated generated on Mon Jun 03 05:05:30 CST 2019.-->
+    select count(*)
+    from pageant_like
+    <where>
+      liker_id=#{voter}
+    </where>
+  </select>
+</mapper>

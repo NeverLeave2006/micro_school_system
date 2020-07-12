@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<!--App自定义的css-->
+		<!--<link rel="stylesheet" type="text/css" href="css/app.css" />-->
+		<link rel="stylesheet" href="css/header.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav title">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color: white;"></a>
+			<a id="post_new" class="mui-icon mui-icon-right-nav mui-pull-right mui-icon-plus" style="color: white;"></a>
+			<h1 class="mui-title title-color"><b>朋友动态</b></h1>
+		</header>
+		
+		<div class="mui-content">
+			
+			
+			<div class="mui-card">
+				<div class="mui-card-header mui-card-media">
+					<img src="http://119.23.239.232:88/sgj/M00/00/00/rBD8W1zgM2uAEq2FAAUui_-RoSI716_100x100.png" />
+					<div class="mui-media-body">
+						莲花
+						<p>发表于 2019-05-18 17:54:32</p>
+					</div>
+				</div>
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						我要丈量山河
+					</div>
+				</div>
+				<div class="mui-card-footer">
+					<a class="mui-card-link">赞<span>2</span></a>
+					<a class="mui-card-link">评论</a>
+					<a class="mui-card-link">更多</a>
+				</div>
+			</div>
+			
+			
+			<div class="mui-card">
+				<div class="mui-card-header mui-card-media">
+					<img src="http://119.23.239.232:88/sgj/M00/00/00/rBD8W1zgM2uAEq2FAAUui_-RoSI716_100x100.png" />
+					<div class="mui-media-body">
+						莲花
+						<p>发表于 2019-05-18 17:51:32</p>
+					</div>
+					<!--<img class="mui-pull-left" src="../images/logo.png" width="34px" height="34px" />
+					<h2>小M</h2>
+					<p>发表于 2016-06-30 15:30</p>-->
+				</div>
+				<div class="mui-card-content" >
+					<img src="http://119.23.239.232:88/sgj/M00/00/00/rBD8W1zgRieAMCTCABD8pI0PFxg602.png" alt="" width="100%"/>
+				</div>
+				<div class="mui-card-footer">
+					<a class="mui-card-link">赞<span>1</span></a>
+					<a class="mui-card-link">评论</a>
+					<a class="mui-card-link">更多</a>
+				</div>
+			</div>
+			
+			
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			
+			mui.plusReady(function() {
+				
+				var post_new = document.getElementById("post_new");
+				post_new.addEventListener("tap", function(){
+					mui.openWindow("post_pyq.html","post_pyq.html");
+				});
+				
+			});
+		</script>
+	</body>
+
+</html>

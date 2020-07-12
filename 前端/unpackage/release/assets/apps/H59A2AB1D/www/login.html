@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html class="ui-page-login mui-fullscreen">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style>
+			.ui-page-login,
+			body {
+				width: 100%;
+				height: 100%;
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			.mui-content {
+				height: 100%;
+				background-image: url(images/login_flower.jpg);
+			}
+			
+			.area {
+				margin: 20px auto 0px auto;
+			}
+			
+			.mui-input-group {
+				margin-top: 10px;
+			}
+			
+			.mui-input-group:first-child {
+				margin-top: 20px;
+			}
+			
+			.mui-input-group label {
+				width: 22%;
+				font-size: 18px;
+				font-family: "微软雅黑";
+			}
+			
+			.mui-input-row label~input,
+			.mui-input-row label~select,
+			.mui-input-row label~textarea {
+				width: 78%;
+			}
+			
+			.mui-card-content {
+				font-family: "微软雅黑";
+			}
+			
+			.mui-checkbox input[type=checkbox],
+			.mui-radio input[type=radio] {
+				top: 6px;
+			}
+			
+			.mui-content-padded {
+				margin-top: 25px;
+			}
+			
+			.mui-btn {
+				padding: 10px;
+			}
+			
+			.link-area {
+				display: block;
+				margin-top: 25px;
+				text-align: center;
+			}
+			
+			.spliter {
+				color: #bbb;
+				padding: 0px 8px;
+			}
+			
+			.oauth-area {
+				position: absolute;
+				bottom: 20px;
+				left: 0px;
+				text-align: center;
+				width: 100%;
+				padding: 0px;
+				margin: 0px;
+			}
+			
+			.oauth-area .oauth-btn {
+				display: inline-block;
+				width: 50px;
+				height: 50px;
+				background-size: 30px 30px;
+				background-position: center center;
+				background-repeat: no-repeat;
+				margin: 0px 20px;
+				/*-webkit-filter: grayscale(100%); */
+				border: solid 1px #ddd;
+				border-radius: 25px;
+			}
+			
+			.oauth-area .oauth-btn:active {
+				border: solid 1px #aaa;
+			}
+			
+			.oauth-area .oauth-btn.disabled {
+				background-color: #ddd;
+			}
+			
+			.pic {
+				width: 300px;
+			}
+			
+			.mui-bar {
+				filter: alpha(Opacity=50);
+				-moz-opacity: 0.7;
+				opacity: 0.7;
+			}
+			
+			.mui-card {
+				filter: alpha(Opacity=100);
+				-moz-opacity: 0.8;
+				opacity: 0.7;
+			}
+			
+			.mui-card-content-inner {
+				filter: alpha(Opacity=100);
+				-moz-opacity: 0.8;
+				opacity: 1;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<h1 class="mui-title">微校系统</h1>
+		</header>
+		<div class="mui-content">
+
+			<div class="mui-card">
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						<form id='login-form' class="mui-input-group">
+							<div class="mui-input-row">
+								<label>账号</label>
+								<input name="phone" id='phone' type="text" class="mui-input-clear mui-input" placeholder="请输入手机号">
+							</div>
+							<div class="mui-input-row">
+								<label>密码</label>
+								<input name="password" id='txt_password' type="password" class="mui-input-clear mui-input" placeholder="请输入密码">
+							</div>
+						</form>
+						<form class="mui-input-group">
+							<ul class="mui-table-view mui-table-view-chevron">
+								<li class="mui-table-view-cell">
+									<input type="checkbox" name="AutoLogin" id="auto_login" />自动登录
+								</li>
+							</ul>
+						</form>
+						<div class="mui-content-padded">
+							<button id='login' class="mui-btn mui-btn-block mui-btn-green">登录</button>
+							<div class="link-area">
+								<a id='reg'>注册账号</a> <span class="spliter">|</span>
+								<a id='forgetPassword'>忘记密码</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="mui-content-padded oauth-area">
+
+			</div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script src="js/app.js"></script>
+		<script>
+			mui.plusReady(function() {
+				document.getElementById("reg").addEventListener("tap", function() {
+					mui.openWindow({
+						url: 'reg.html',
+						id: 'reg.html',
+						extras: {
+							name:"注册"
+						},
+						show: {
+							autoShow: true, //页面loaded事件发生后自动显示，默认为true
+							aniShow: 'slide-in-right', //页面显示动画，默认为”slide-in-right“；
+							duration: 200 //页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+						},
+						waiting: {
+							autoShow: true, //自动显示等待框，默认为true
+							title: '正在加载...'//等待对话框上显示的提示内容
+						}
+					})
+				})
+				//获取各种元素
+				var userform = document.getElementById("login-form");
+				var username = document.getElementById("phone");
+				var txt_password = document.getElementById("txt_password");
+				var login_button = document.getElementById("login");
+				var auto_login = document.getElementById("auto_login");
+
+				// 判断用户是否注册登录过，如果本地内存有全局的用户对象，此时直接跳转到首页
+				var userInfo = app.getUserGlobalInfo();
+
+				if(userInfo != null) {
+					console.log(JSON.stringify(userInfo));
+					username.value = userInfo.phone;
+
+					// 与后端联调
+					mui.ajax(app.serverUrl + "/login", {
+						data: {
+							phone: userInfo.phone,
+							password: userInfo.password,
+						},
+						dataType: 'json', //服务器返回json格式数据
+						type: 'post', //HTTP请求类型
+						timeout: 10000, //超时时间设置为10秒；
+						headers: {
+							'Content-Type': 'application/json'
+						},
+						success: function(data) {
+							//服务器返回响应，根据响应结果，分析是否登录成功；
+							console.log(JSON.stringify(data.data));
+							console.log(JSON.stringify(data));
+
+							username.blur();
+							txt_password.blur();
+
+							if(data.status == 200) {
+								app.setUserGlobalInfo(data.data);
+								mui.openWindow("index.html", "index.html");
+							} else { //保存的默认信息错误
+								app.showToast(data.msg, "error");
+								app.userLogout();
+							}
+						}
+
+					});
+				}
+
+				login_button.addEventListener("tap", function(e) {
+					// 判断用户名是否为空，如果为空则让其获得焦点
+					if(!app.isNotNull(username.value)) {
+						// 获取焦点
+						username.focus();
+						app.showToast("手机号不能为空", "error");
+					} else if(!app.isNotNull(txt_password.value)) {
+						// 获取焦点
+						txt_password.focus();
+						app.showToast("密码不能为空", "error");
+					} else {
+						// 判断用户名和密码的长度，进行限制
+						if(!(/^1(3|4|5|7|8)\d{9}$/.test(username.value))) {
+							app.showToast("手机号错误", "error");
+						} else if(txt_password.value.length > 12) {
+							app.showToast("密码不能超过12", "error");
+						}
+
+						// 与后端联调
+						mui.ajax(app.serverUrl + "/login", {
+							data: {
+								phone: username.value,
+								password: txt_password.value,
+							},
+							dataType: 'json', //服务器返回json格式数据
+							type: 'post', //HTTP请求类型
+							timeout: 10000, //超时时间设置为10秒；
+							headers: {
+								'Content-Type': 'application/json'
+							},
+							success: function(data) {
+								//服务器返回响应，根据响应结果，分析是否登录成功；
+								//								console.log(JSON.stringify(data));
+
+								username.blur();
+								txt_password.blur();
+
+								if(data.status == 200) {
+									// 登录或者注册成功之后，保存全局用户对象到本地缓存
+									var userInfoJson = data.data;
+									if(auto_login.checked == true) { //如果自动登录被选中，则保存登录信息到本地
+										app.setUserGlobalInfo(userInfoJson);
+									}
+									//
+									//userform.submit();
+									// 页面跳转
+									mui.openWindow("index.html", "index.html");
+								} else {
+									app.showToast(data.msg, "error");
+								}
+							}
+
+						});
+
+					}
+
+					// 阻止默认事件，阻止默认表单提交
+					e.preventDefault();
+				});
+			})
+		</script>
+
+	</body>
+
+</html>

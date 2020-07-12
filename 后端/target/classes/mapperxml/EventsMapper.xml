@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sgj.microschoolsystem.mapper.EventsMapper">
+  <resultMap id="BaseResultMap" type="com.sgj.microschoolsystem.model.Events">
+    <!--@mbg.generated generated on Tue May 28 18:20:09 CST 2019.-->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="posterid" jdbcType="VARCHAR" property="posterid" />
+    <result column="content" jdbcType="VARCHAR" property="content" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
+    <result column="img" jdbcType="VARCHAR" property="img" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="school_name" jdbcType="VARCHAR" property="schoolName" />
+    <result column="dept" jdbcType="VARCHAR" property="dept" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated generated on Tue May 28 18:20:09 CST 2019.-->
+    delete from events
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.sgj.microschoolsystem.model.Events">
+    <!--@mbg.generated generated on Tue May 28 18:20:09 CST 2019.-->
+    insert into events (id, name, posterid, 
+      content, url, img, 
+      create_time, school_name,dept)
+    values (#{id,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{posterid,jdbcType=VARCHAR}, 
+      #{content,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}, #{img,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{schoolName,jdbcType=VARCHAR},#{dept,jdbcType=VARCHAR} )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.sgj.microschoolsystem.model.Events">
+    <!--@mbg.generated generated on Tue May 28 18:20:09 CST 2019.-->
+    update events
+    set name = #{name,jdbcType=VARCHAR},
+      posterid = #{posterid,jdbcType=VARCHAR},
+      content = #{content,jdbcType=VARCHAR},
+      url = #{url,jdbcType=VARCHAR},
+      img = #{img,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      school_name = #{schoolName,jdbcType=VARCHAR},
+      dept=#{dept,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated generated on Tue May 28 18:20:09 CST 2019.-->
+    select id, name, posterid, content, url, img, create_time, school_name,dept
+    from events
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    <!--@mbg.generated generated on Tue May 28 18:20:09 CST 2019.-->
+    select id, name, posterid, content, url, img, create_time, school_name, dept
+    from events
+  </select>
+  <select id="selectMySchool" parameterType="java.lang.String" resultType="com.sgj.microschoolsystem.model.Events">
+    select id, name, posterid, content, url, img, create_time, school_name, dept
+    from events
+    <where>
+      school_name=#{school}
+    </where>
+  </select>
+
+</mapper>

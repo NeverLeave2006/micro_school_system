@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sgj.microschoolsystem.mapper.MarketMapper">
+  <resultMap id="BaseResultMap" type="com.sgj.microschoolsystem.model.Market">
+    <!--@mbg.generated generated on Sat May 11 15:44:07 CST 2019.-->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="img" jdbcType="VARCHAR" property="img" />
+    <result column="poster_id" jdbcType="VARCHAR" property="posterId" />
+    <result column="connect" jdbcType="VARCHAR" property="connect" />
+    <result column="school" jdbcType="VARCHAR" property="school" />
+    <result column="price" jdbcType="VARCHAR" property="price" />
+    <result column="create_time" jdbcType="VARCHAR" property="createTime" />
+  </resultMap>
+
+    <resultMap id="BaseResultMap2" type="com.sgj.microschoolsystem.model.bo.MarketItem">
+        <!--@mbg.generated generated on Sat May 11 15:44:07 CST 2019.-->
+        <id column="mid" jdbcType="VARCHAR" property="id" />
+        <result column="username" jdbcType="VARCHAR" property="username"/>
+        <result column="face_image" jdbcType="VARCHAR" property="face_image"/>
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="description" jdbcType="VARCHAR" property="description" />
+        <result column="img" jdbcType="VARCHAR" property="img" />
+        <result column="poster_id" jdbcType="VARCHAR" property="posterId" />
+        <result column="connect" jdbcType="VARCHAR" property="connect" />
+        <result column="school" jdbcType="VARCHAR" property="school" />
+        <result column="price" jdbcType="VARCHAR" property="price" />
+        <result column="create_time" jdbcType="VARCHAR" property="createTime" />
+    </resultMap>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated generated on Sat May 11 15:44:07 CST 2019.-->
+    delete from market
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.sgj.microschoolsystem.model.Market">
+    <!--@mbg.generated generated on Sat May 11 15:44:07 CST 2019.-->
+    insert into market (id, name, description, 
+      img, poster_id, connect, 
+      school, price, create_time
+      )
+    values (#{id,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}, 
+      #{img,jdbcType=VARCHAR}, #{posterId,jdbcType=VARCHAR}, #{connect,jdbcType=VARCHAR}, 
+      #{school,jdbcType=VARCHAR}, #{price,jdbcType=VARCHAR}, #{createTime,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.sgj.microschoolsystem.model.Market">
+    <!--@mbg.generated generated on Sat May 11 15:44:07 CST 2019.-->
+    update market
+    set name = #{name,jdbcType=VARCHAR},
+      description = #{description,jdbcType=VARCHAR},
+      img = #{img,jdbcType=VARCHAR},
+      poster_id = #{posterId,jdbcType=VARCHAR},
+      connect = #{connect,jdbcType=VARCHAR},
+      school = #{school,jdbcType=VARCHAR},
+      price = #{price,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated generated on Sat May 11 15:44:07 CST 2019.-->
+    select id, name, description, img, poster_id, connect, school, price, create_time
+    from market
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    <!--@mbg.generated generated on Sat May 11 15:44:07 CST 2019.-->
+    select id, name, description, img, poster_id, connect, school, price, create_time
+    from market
+  </select>
+
+  <select id="selectMySchool" parameterType="java.lang.String" resultMap="BaseResultMap2">
+    <!--@mbg.generated generated on Sat May 11 15:44:07 CST 2019.-->
+    select users.username, users.face_image,market.id mid, name, description, img, poster_id, connect, school, price, create_time
+    from market, users
+    <where>
+     users.id=market.poster_id
+     and
+     market.school=#{school}
+      and
+     DATE_SUB(CURDATE(), INTERVAL 30 DAY) &lt;= market.create_time
+    </where>
+  </select>
+</mapper>

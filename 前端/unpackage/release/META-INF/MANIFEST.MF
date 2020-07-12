@@ -1,0 +1,650 @@
+Manifest-Version: 1.0
+
+Name: AndroidManifest.xml
+SHA1-Digest: 2P0PUTjZZY2JSPdOH+dy2CdGzW0=
+
+Name: android-support-multidex.version.txt
+SHA1-Digest: fq97MHJVQ/qTT2mlG29CB0SVZFA=
+
+Name: assets/apps/H59A2AB1D/www/README.md
+SHA1-Digest: /JQH81iMV3MnGjTPzavtEFnNAb8=
+
+Name: assets/apps/H59A2AB1D/www/css/app.css
+SHA1-Digest: DuMQQa0fV56gqNkGTtlraPpQwS8=
+
+Name: assets/apps/H59A2AB1D/www/css/feedback.css
+SHA1-Digest: /j3D2e1f/b7IebTBH3gngFiQz6c=
+
+Name: assets/apps/H59A2AB1D/www/css/header.css
+SHA1-Digest: 7uZrl0XX3ZKq/rpBA3Mt1DVzIwM=
+
+Name: assets/apps/H59A2AB1D/www/css/main.css
+SHA1-Digest: YBhO9bCEWXGu0nOnCTOgD6aweK0=
+
+Name: assets/apps/H59A2AB1D/www/css/mui.css
+SHA1-Digest: F7vt7OA5kRHONHNQiD7UX1D6b5w=
+
+Name: assets/apps/H59A2AB1D/www/css/mui.imageviewer.css
+SHA1-Digest: mPaoz+vBAkzSmbdJWN2RPSaDDJY=
+
+Name: assets/apps/H59A2AB1D/www/css/mui.indexedlist.css
+SHA1-Digest: 0Cqw3O6qzazL24QT8aylDD6FkzA=
+
+Name: assets/apps/H59A2AB1D/www/css/mui.min.css
+SHA1-Digest: NbiXHUvjOJf4exEH5Y4H7BcMO+g=
+
+Name: assets/apps/H59A2AB1D/www/css/style.css
+SHA1-Digest: NIhvlqwcUlrPVP84nJpejf6wYpI=
+
+Name: assets/apps/H59A2AB1D/www/fonts/mui.ttf
+SHA1-Digest: ZTRCsrSCxXfQemMYWe9adoltU+E=
+
+Name: assets/apps/H59A2AB1D/www/forget_password.html
+SHA1-Digest: qPWQZauwGmraBnYcDfE0iXxS9Ek=
+
+Name: assets/apps/H59A2AB1D/www/images/60x60.gif
+SHA1-Digest: uEhQW1Ue2JygiIHBIeFEJG3DtkE=
+
+Name: assets/apps/H59A2AB1D/www/images/cbd.jpg
+SHA1-Digest: KtngdaUCN/mMUUullE0QTQ49SsU=
+
+Name: assets/apps/H59A2AB1D/www/images/error.png
+SHA1-Digest: 9kBPi5Su/koUlrZjMWmmMFgZ7Yc=
+
+Name: assets/apps/H59A2AB1D/www/images/iconfont-tianjia.png
+SHA1-Digest: CFRQT2Mx5QZnf/13Z3CMfuwPsbo=
+
+Name: assets/apps/H59A2AB1D/www/images/login_flower.jpg
+SHA1-Digest: jgX/objUN9wbzDUw7LnDJvy4vR4=
+
+Name: assets/apps/H59A2AB1D/www/images/logo.png
+SHA1-Digest: sacNMGd0EhjPaymM4Ia70YZBsNE=
+
+Name: assets/apps/H59A2AB1D/www/images/muwu.jpg
+SHA1-Digest: zRy6evh6wV/gMozvFULlVTfFUvo=
+
+Name: assets/apps/H59A2AB1D/www/images/qihoo.png
+SHA1-Digest: QIS62TvDGXRFQVOHuFzt/DkDtJQ=
+
+Name: assets/apps/H59A2AB1D/www/images/qq.png
+SHA1-Digest: vKv/ij8bgv1lD3QuBTqfzxw1Yj0=
+
+Name: assets/apps/H59A2AB1D/www/images/qrcode.png
+SHA1-Digest: tS1LO5IAacXmfuzaQuP71jWa+Nw=
+
+Name: assets/apps/H59A2AB1D/www/images/shuijiao.jpg
+SHA1-Digest: lnERSCVRASS9Lb8CZtlgN+hQCCg=
+
+Name: assets/apps/H59A2AB1D/www/images/sinaweibo.png
+SHA1-Digest: eERFtoGAaMeT6DccRaabcECT49Q=
+
+Name: assets/apps/H59A2AB1D/www/images/upload.png
+SHA1-Digest: ZTyopkQHGI4so/Rh3F7odoGWe2U=
+
+Name: assets/apps/H59A2AB1D/www/images/user-photo.png
+SHA1-Digest: dRX/cqspe0U9Jzjj04jiiDhDDgo=
+
+Name: assets/apps/H59A2AB1D/www/images/weixin.png
+SHA1-Digest: 9RRUbYPJPuklB0tczwCTcp//IK0=
+
+Name: assets/apps/H59A2AB1D/www/images/yuantiao.jpg
+SHA1-Digest: dD6yi8CNRgIFFOCsrganAlbIUVY=
+
+Name: assets/apps/H59A2AB1D/www/index.html
+SHA1-Digest: zvPBBhO1MTmVE42UgRHnAqJ3iuA=
+
+Name: assets/apps/H59A2AB1D/www/js/app.js
+SHA1-Digest: hRzSWm8plxCk21FJ0yPgg8ZeB8M=
+
+Name: assets/apps/H59A2AB1D/www/js/arttmpl.js
+SHA1-Digest: DKOWxgCJFrbZs5KEo+6/IH56OGI=
+
+Name: assets/apps/H59A2AB1D/www/js/common.js
+SHA1-Digest: QEGXogs1OgMuOG/zgFnX/bBryIA=
+
+Name: assets/apps/H59A2AB1D/www/js/feedback.js
+SHA1-Digest: oRr/PkF8Xj9bHGkGXXdUjaR1XAI=
+
+Name: assets/apps/H59A2AB1D/www/js/jquery-3.4.0.min.js
+SHA1-Digest: 5JJRlvb0RPpYkVQg+82A+QnGjSg=
+
+Name: assets/apps/H59A2AB1D/www/js/mui.enterfocus.js
+SHA1-Digest: Znu560IVgRrwnFcs7Hy/vbSBVV0=
+
+Name: assets/apps/H59A2AB1D/www/js/mui.imageViewer.js
+SHA1-Digest: QfpdYiyGyvwkxddN896mK8HZKb0=
+
+Name: assets/apps/H59A2AB1D/www/js/mui.indexedlist.js
+SHA1-Digest: jYTzWtMmBq29OFVWSJxjHheDk+w=
+
+Name: assets/apps/H59A2AB1D/www/js/mui.js
+SHA1-Digest: H3U9Fk4MJwx4SNqH4twaLdiTWrU=
+
+Name: assets/apps/H59A2AB1D/www/js/mui.locker.js
+SHA1-Digest: eyUdgobiI2aL7uGjZjDoAn9i5Qs=
+
+Name: assets/apps/H59A2AB1D/www/js/mui.min.js
+SHA1-Digest: N965uT33ciNvnu0jlCOciZkovI4=
+
+Name: assets/apps/H59A2AB1D/www/js/mui.view.js
+SHA1-Digest: sXtLfOCEGRRd+sVXDX0g63YLuxs=
+
+Name: assets/apps/H59A2AB1D/www/js/webviewGroup.js
+SHA1-Digest: xmDp+NHIFsA4RYmU7TjO2BJTBiA=
+
+Name: assets/apps/H59A2AB1D/www/login.html
+SHA1-Digest: Pz8yuPzgg7isXIWiqxTimL42uKo=
+
+Name: assets/apps/H59A2AB1D/www/manifest.json
+SHA1-Digest: j4z0QUnZj453E3ClmgDFxA3nHAY=
+
+Name: assets/apps/H59A2AB1D/www/myface.html
+SHA1-Digest: gUCqKKGn+Qu1SS96WcEjkKRcU2o=
+
+Name: assets/apps/H59A2AB1D/www/plugin/cropper/css/cropper.css
+SHA1-Digest: cqHjcPCncRusvS2K1c3+Hc/NVWs=
+
+Name: assets/apps/H59A2AB1D/www/plugin/cropper/css/main.css
+SHA1-Digest: xiK3wcrktkENbuNsJYfZL76w9No=
+
+Name: assets/apps/H59A2AB1D/www/plugin/cropper/images/picture.jpg
+SHA1-Digest: 2H35U7/WVdNGZA7hxZHVaDI3XWY=
+
+Name: assets/apps/H59A2AB1D/www/plugin/cropper/index.html
+SHA1-Digest: F39sxpSO4G7Bov0q9TQVoSGBcyE=
+
+Name: assets/apps/H59A2AB1D/www/plugin/cropper/js/cropper.js
+SHA1-Digest: uoIacTdu0umRBUN//fBF0TZmak4=
+
+Name: assets/apps/H59A2AB1D/www/plugin/cropper/js/main.js
+SHA1-Digest: GBfRk6ByntdGQmUUSpDD/ehQv1s=
+
+Name: assets/apps/H59A2AB1D/www/plugin/cropper/uploader.html
+SHA1-Digest: sSt5v5jdrDctbCr+62jCXna40oU=
+
+Name: assets/apps/H59A2AB1D/www/plugin/v3.1.6/css/cropper.css
+SHA1-Digest: cqHjcPCncRusvS2K1c3+Hc/NVWs=
+
+Name: assets/apps/H59A2AB1D/www/plugin/v3.1.6/css/main.css
+SHA1-Digest: xiK3wcrktkENbuNsJYfZL76w9No=
+
+Name: assets/apps/H59A2AB1D/www/plugin/v3.1.6/images/picture.jpg
+SHA1-Digest: 2H35U7/WVdNGZA7hxZHVaDI3XWY=
+
+Name: assets/apps/H59A2AB1D/www/plugin/v3.1.6/index.html
+SHA1-Digest: NMqMSVvcG87fBQahV3aN87ZAh/E=
+
+Name: assets/apps/H59A2AB1D/www/plugin/v3.1.6/js/cropper.js
+SHA1-Digest: uoIacTdu0umRBUN//fBF0TZmak4=
+
+Name: assets/apps/H59A2AB1D/www/plugin/v3.1.6/js/main.js
+SHA1-Digest: pEiUnZQaYOf/oDXDKtgLKDdXnUU=
+
+Name: assets/apps/H59A2AB1D/www/plugin/v3.1.6/myface-uploader.html
+SHA1-Digest: N5fZw+xl1eGeNwvwfI2GhznukLc=
+
+Name: assets/apps/H59A2AB1D/www/reg.html
+SHA1-Digest: x4Kmaktgsxg58ICUKTxjnyCvmDc=
+
+Name: assets/apps/H59A2AB1D/www/sub1.html
+SHA1-Digest: drw0z1hQYWYKbsVXzZb9J+VzB/0=
+
+Name: assets/apps/H59A2AB1D/www/sub1/chat.html
+SHA1-Digest: DSSIfmmT3SzOP0migs3Ez9/oL00=
+
+Name: assets/apps/H59A2AB1D/www/sub2.html
+SHA1-Digest: 4g4wv3QknvZkdT023/4MXXn6UmE=
+
+Name: assets/apps/H59A2AB1D/www/sub3.html
+SHA1-Digest: sYKYJbmTiHXdAsXyLNTQQXqNeuw=
+
+Name: assets/apps/H59A2AB1D/www/sub4.html
+SHA1-Digest: U5TGLKwxUl87GJuk1KqXjoV+lBo=
+
+Name: assets/apps/H59A2AB1D/www/tab-top-subpage-1.html
+SHA1-Digest: ccB6fQPXiEs9sxcRjxRJ/+KVFaM=
+
+Name: assets/apps/H59A2AB1D/www/tab-top-subpage-2.html
+SHA1-Digest: d+P0FMXujXGhZS4rv2P4UZoMLPM=
+
+Name: assets/apps/H59A2AB1D/www/tab-top-subpage-3.html
+SHA1-Digest: C/tKAfBf1zBn3wYzNzf0uIcys7M=
+
+Name: assets/apps/H59A2AB1D/www/unlock.html
+SHA1-Digest: PeIHzc97CuCsTQQhNhYglbthUAE=
+
+Name: assets/data/dcloud_control.xml
+SHA1-Digest: xleQYNi5ASO0krNLirfnM60lmEU=
+
+Name: assets/data/dcloud_error.html
+SHA1-Digest: MyuCeMAliYltyaFpn/DsFXQIXDY=
+
+Name: assets/data/dcloud_properties.xml
+SHA1-Digest: cgyDkIDx7HGXaQ3aJAcofqFt7TM=
+
+Name: assets/data/dcloud_url.json
+SHA1-Digest: N0wZIA/uIBsm0BU0h6KBqTRhWIQ=
+
+Name: assets/data/wap2app/__shortcut.js
+SHA1-Digest: CWnboR5LC8TFJ0YoI5rQHNJPF3s=
+
+Name: assets/data/wap2app/__template.json
+SHA1-Digest: +phWP1cAnGxEmv8Y0LpBzN/FtTg=
+
+Name: assets/data/wap2app/__wap2app.js
+SHA1-Digest: QpvbdGifTNo6KGwlyAiGRrxYevw=
+
+Name: assets/data/wap2app/__wap2app.ttf
+SHA1-Digest: qixFg6OTTdzMSd4rEShhmPDgn2I=
+
+Name: assets/data/wap2app/__wap2appbrowser.html
+SHA1-Digest: 3e/7xMezlYopMG2IlXm9NnrNr8w=
+
+Name: assets/data/wap2app/__wap2appcontext.html
+SHA1-Digest: zstQMR22KxeDClO6HVAdZU4dod8=
+
+Name: assets/data/wap2app/__wap2apperror.html
+SHA1-Digest: bLa85ZBg9vwFnEHhh0+2V8+LYnI=
+
+Name: assets/data/wap2app/__wap2appplayer.js
+SHA1-Digest: 6JyHXFYn+TIdJKkZE9WJL+UYm5E=
+
+Name: assets/data/wap2app/__wap2appquit.js
+SHA1-Digest: UQkT+VjV6xvG5WuKPJzOww3JMhU=
+
+Name: assets/data/wap2app/__wap2appswiper.html
+SHA1-Digest: CN3N+CTihZIfG0P6rryBdRT8k0U=
+
+Name: assets/data/wap2app/__wap2apptabbar.css
+SHA1-Digest: lFwmJV3aTU8dxT4IC77ZFITYeps=
+
+Name: assets/data/wap2app/__wap2apptabbar.js
+SHA1-Digest: dDsHWEO/8dPJ/pk+BoGkesZve2g=
+
+Name: assets/fonts/dcloud_iconfont.ttf
+SHA1-Digest: qixFg6OTTdzMSd4rEShhmPDgn2I=
+
+Name: assets/libso.so
+SHA1-Digest: VKRENEfegdZ82v48xiUf6j8x0YA=
+
+Name: assets/res/HBuilder.png
+SHA1-Digest: X6XOPF9oX7CfSofHOzAs61ojxh0=
+
+Name: assets/res/dcloud_beep.ogg
+SHA1-Digest: LBdtezMwgIJtJFnsa9qp2sPFm3w=
+
+Name: assets/res/dcloud_prograss_snow1.png
+SHA1-Digest: Vafj/Tc9mpFJC153T5KKSIRJtUg=
+
+Name: assets/res/point.png
+SHA1-Digest: 099YVv4Dd6pwlnu0C38LOERev4A=
+
+Name: classes.dex
+SHA1-Digest: cRgLkhmqpvLnB8dfcstIRC0AJ5o=
+
+Name: io/dcloud/all.js
+SHA1-Digest: kxuFj6zlsHSnvx8ZhiKMvatrNT4=
+
+Name: lib/armeabi-v7a/libdaemon.so
+SHA1-Digest: /J2k/CS1b0xm7npqmaZI2LQNBoI=
+
+Name: lib/armeabi-v7a/libpl_droidsonroids_gif.so
+SHA1-Digest: 08qaE5EAkmQMCaZ8AerLqqklXGU=
+
+Name: lib/armeabi-v7a/libso.so
+SHA1-Digest: R9+AG/O+zhgnqIqiuF1aVaGXE2o=
+
+Name: lib/armeabi/libdaemon.so
+SHA1-Digest: Aio1At9Rkyyg2hS7NBhoiR467cM=
+
+Name: lib/armeabi/libpl_droidsonroids_gif.so
+SHA1-Digest: zocRR7oP0xzkAUwBKCSIKwT240k=
+
+Name: lib/armeabi/libso.so
+SHA1-Digest: H1ocxiJdPQqV8EjwTtT+S3xpLIE=
+
+Name: lib/x86/libpl_droidsonroids_gif.so
+SHA1-Digest: 4RcNaR09QlDPz+yfv9pCWloVrWs=
+
+Name: lib/x86/libso.so
+SHA1-Digest: Dw10z8lL/TvbBO5iyrnoFyYGy2o=
+
+Name: res/anim/dcloud_slide_in_from_right.xml
+SHA1-Digest: Qry1IjP9P7Ry0VAzvjo58A2OWwc=
+
+Name: res/anim/dcloud_slide_in_from_top.xml
+SHA1-Digest: j9NoB6YvS+k2Hu4CpYn/g70kGaY=
+
+Name: res/anim/dcloud_slide_out_to_right.xml
+SHA1-Digest: aXHbNNwFwNilqiERBtSId8Ov4OA=
+
+Name: res/anim/dcloud_slide_out_to_top.xml
+SHA1-Digest: tl8+vRVn6n9te/3PrIq4RKz2sSw=
+
+Name: res/anim/dcloud_slide_right_in.xml
+SHA1-Digest: 3NXhOshe4uW5Z+pEzlgE2lBFA1Q=
+
+Name: res/anim/dcloud_slide_right_out.xml
+SHA1-Digest: 0K+hsbIVs7N7sbQH2/d4NAUnRKU=
+
+Name: res/anim/dcloud_slide_static.xml
+SHA1-Digest: dafLGNIlOk+zCRhQVn9VbcgbrBM=
+
+Name: res/color/dcloud_slt_about_text_color.xml
+SHA1-Digest: 7E25vbQhNU9V1jNvQHIDMgVBuMY=
+
+Name: res/drawable-hdpi-v4/dcloud_assistan_loc.png
+SHA1-Digest: 0ftOrslm9opEfrlckBmKjcbY8KI=
+
+Name: res/drawable-hdpi-v4/dcloud_left_arrow.png
+SHA1-Digest: in/b41T0Vzb0ZoXAnBI9NTSn6RM=
+
+Name: res/drawable-hdpi-v4/dcloud_record_border.xml
+SHA1-Digest: 5O7mlyK4jvUnaoIgUv7HgIHjkOM=
+
+Name: res/drawable-hdpi-v4/dcloud_record_view_line.png
+SHA1-Digest: k0oVSLPG4nNpdAhYPVyWPui/RVE=
+
+Name: res/drawable-hdpi-v4/dcloud_right_arrow.png
+SHA1-Digest: rE9slW35d9yMJ7epB9qJzcsahFI=
+
+Name: res/drawable-hdpi-v4/dcloud_shadow_left.png
+SHA1-Digest: aT9dSdf07m+WQ1k2sS1650pvC4A=
+
+Name: res/drawable-hdpi-v4/dcloud_snow_black.png
+SHA1-Digest: 3BF3RGouen5gKZN4SMnwq+/Wcgo=
+
+Name: res/drawable-hdpi-v4/dcloud_snow_black_progress.xml
+SHA1-Digest: /2X6P3/xNGhes1CKMPuc35XuLCg=
+
+Name: res/drawable-hdpi-v4/dcloud_snow_white.png
+SHA1-Digest: 2ojaKrcF807CeqyAD/OXj7K/DRI=
+
+Name: res/drawable-hdpi-v4/dcloud_snow_white_progress.xml
+SHA1-Digest: 70Oy2T6eb6Hqrq5VaAuq9KVBrRs=
+
+Name: res/drawable-hdpi-v4/icon.png
+SHA1-Digest: RYv8ZTUpQuURM4ViRFDhb/HLLLg=
+
+Name: res/drawable-hdpi-v4/splash.png
+SHA1-Digest: DHR0pPygTbfZpzel8d2V/4gfAWk=
+
+Name: res/drawable-ldpi-v4/icon.png
+SHA1-Digest: 7PbXt/186vwUSY093oa31hbJVew=
+
+Name: res/drawable-mdpi-v4/icon.png
+SHA1-Digest: 7PbXt/186vwUSY093oa31hbJVew=
+
+Name: res/drawable-xhdpi-v4/dcloud_actionsheet_bottom_normal.9.png
+SHA1-Digest: KJSfVNz6gJ9LJaEiJ/x8LOzmDjk=
+
+Name: res/drawable-xhdpi-v4/dcloud_actionsheet_bottom_pressed.9.png
+SHA1-Digest: MkzhFk2lV1SdXvJZK8quVdr1mw0=
+
+Name: res/drawable-xhdpi-v4/dcloud_actionsheet_middle_normal.9.png
+SHA1-Digest: UaOM0RLu9SBVcphjq/qEtlBzWWY=
+
+Name: res/drawable-xhdpi-v4/dcloud_actionsheet_middle_pressed.9.png
+SHA1-Digest: v81JGfpy/Pv56Efuw0BaYlNksiE=
+
+Name: res/drawable-xhdpi-v4/dcloud_actionsheet_single_normal.9.png
+SHA1-Digest: UE44xZ7vV5IKgtTqVjmz9WdwZuQ=
+
+Name: res/drawable-xhdpi-v4/dcloud_actionsheet_single_pressed.9.png
+SHA1-Digest: QU3oAMgJ/rlVSdKZYZ7deiDx3Ko=
+
+Name: res/drawable-xhdpi-v4/dcloud_actionsheet_top_normal.9.png
+SHA1-Digest: SKcqQWQ5aoO4nIU7nUhSZu1buyY=
+
+Name: res/drawable-xhdpi-v4/dcloud_actionsheet_top_pressed.9.png
+SHA1-Digest: l/bZ5WUu3vRh/aioFPpVO5vL6+g=
+
+Name: res/drawable-xhdpi-v4/dcloud_as_bg_ios6.9.png
+SHA1-Digest: Mo9Q8M45i18iVy++rQDQ8DW5JT0=
+
+Name: res/drawable-xhdpi-v4/dcloud_as_cancel_bt_bg.9.png
+SHA1-Digest: aApXFDoaij2b2E/00fLWCxTgXOI=
+
+Name: res/drawable-xhdpi-v4/dcloud_as_other_bt_bg.9.png
+SHA1-Digest: k0zVpuwQSugVd1dvD+D4lIiBDE4=
+
+Name: res/drawable-xhdpi-v4/dcloud_image_pick_mask.9.png
+SHA1-Digest: 0qrLARJqeJZMOfVkYe6zdBkWxZY=
+
+Name: res/drawable-xhdpi-v4/dcloud_image_pick_no_media.png
+SHA1-Digest: dsogMWZPD4CTWdW/3NUaheChMTI=
+
+Name: res/drawable-xhdpi-v4/dcloud_recent.png
+SHA1-Digest: mFLdy0BqIcZr/QQWnzWQrCx8dRY=
+
+Name: res/drawable-xhdpi-v4/dcloud_streamapp_about_feedback.png
+SHA1-Digest: yq0faAvY/kHW7b3qaIJrf8d8/f0=
+
+Name: res/drawable-xhdpi-v4/dcloud_streamapp_about_first_start_short_c
+ ut_cheked.png
+SHA1-Digest: jp+TnmD4SOjnn/I0Pd/IrCUCnRs=
+
+Name: res/drawable-xhdpi-v4/dcloud_streamapp_about_first_start_short_c
+ ut_normal.png
+SHA1-Digest: UuPYU1vdZNWH1pVydHdf+6+JTww=
+
+Name: res/drawable-xhdpi-v4/dcloud_streamapp_about_right_arrow.png
+SHA1-Digest: 02z73KnkjWo+e951GAxxj7Y0MHU=
+
+Name: res/drawable-xhdpi-v4/dcloud_streamapp_about_share.png
+SHA1-Digest: NbGylFglIpq3RH/IR+ycmROdCtM=
+
+Name: res/drawable-xhdpi-v4/dcloud_streamapp_about_update.png
+SHA1-Digest: AIvAqLUFHaYCayMDbYXO+vcPxkw=
+
+Name: res/drawable-xhdpi-v4/dcloud_streamapp_icon.png
+SHA1-Digest: kNjCAAdezBHEJP0ViTdOa99e9cw=
+
+Name: res/drawable-xhdpi-v4/dcloud_streamapp_icon_appdefault.png
+SHA1-Digest: pug0sgGpRwN3BM4/QZygzFld+RU=
+
+Name: res/drawable-xhdpi-v4/icon.png
+SHA1-Digest: NzOmxP9MrDIjyFf2OarBgvyu2ys=
+
+Name: res/drawable-xhdpi-v4/offline_pin.png
+SHA1-Digest: du8lLR59VuEPWcK9PxLn+eSFNF8=
+
+Name: res/drawable-xhdpi-v4/offline_pin_round.png
+SHA1-Digest: uuU+A1f7WZwFdGC9KlhRgHT4nIU=
+
+Name: res/drawable-xhdpi-v4/shortcut_permission_guide_bg.9.png
+SHA1-Digest: zw2OkP49GPceyGxz+3L64NMup+w=
+
+Name: res/drawable-xhdpi-v4/shortcut_permission_guide_close.png
+SHA1-Digest: ULUgfkElagSykDX7Mx8gHNHVPm8=
+
+Name: res/drawable-xhdpi-v4/shortcut_permission_guide_play.png
+SHA1-Digest: b+Zu+X+I3VqNBvYZdsGocoBKyGg=
+
+Name: res/drawable-xhdpi-v4/side_bar_bg.9.png
+SHA1-Digest: ZGgpqG3nL+88o+eqte42YXZV+as=
+
+Name: res/drawable-xhdpi-v4/side_bar_close.png
+SHA1-Digest: gqY6ztia4MEkbW6/6iFoM7yK+6A=
+
+Name: res/drawable-xhdpi-v4/side_bar_closebar.png
+SHA1-Digest: 4hnt0mhFf8U+y2dTOKAzts+ZV+k=
+
+Name: res/drawable-xhdpi-v4/side_bar_custom_menu_item_bg.9.png
+SHA1-Digest: I+3UCBubhBM2GdJ1uIwDBFT2Cvs=
+
+Name: res/drawable-xhdpi-v4/side_bar_custom_menu_item_line.9.png
+SHA1-Digest: CsimApNkKrVvuHUk7X9K7J1dLVo=
+
+Name: res/drawable-xhdpi-v4/side_bar_custom_menu_item_selected.png
+SHA1-Digest: eYMgY2JUgPnEznI5mtYbg63Y9OE=
+
+Name: res/drawable-xhdpi-v4/side_bar_favorite.png
+SHA1-Digest: O7LNivc5QttHkcDDaYbZiUzvDqM=
+
+Name: res/drawable-xhdpi-v4/side_bar_home.png
+SHA1-Digest: 7jfTvLMn7jGOPAfV2IKkV0jEcow=
+
+Name: res/drawable-xhdpi-v4/side_bar_openbar.png
+SHA1-Digest: x4ehjM1W73P3W7j+bIWsN8P+aeE=
+
+Name: res/drawable-xhdpi-v4/side_bar_refresh.png
+SHA1-Digest: lYdy5VmAjLpUL7m+/0rbSxjrNRg=
+
+Name: res/drawable-xhdpi-v4/side_bar_share.png
+SHA1-Digest: 42R3nUmOoM/i6AK9dMP2/wYN7fc=
+
+Name: res/drawable-xhdpi-v4/sidebar_shortcut.png
+SHA1-Digest: bciXuUivfPwLp8sVLfX6mJTwp9E=
+
+Name: res/drawable-xhdpi-v4/splash.png
+SHA1-Digest: xwrUasdk1ZXdipAzFsQF8L6DeDc=
+
+Name: res/drawable-xxhdpi-v4/dcloud_assistan_loc.png
+SHA1-Digest: 8XftALfaTcX2TJ1WxFBfx3bCI+0=
+
+Name: res/drawable-xxhdpi-v4/icon.png
+SHA1-Digest: 3VS40Zj24DQBypDF5OLd9ggQIV0=
+
+Name: res/drawable-xxhdpi-v4/splash.png
+SHA1-Digest: l4eq1bhWFblnXlUvuYBZOOELCRE=
+
+Name: res/drawable-xxxhdpi-v4/icon.png
+SHA1-Digest: 2kvg+gz7gJN7QVe4WXay3FGqWEc=
+
+Name: res/drawable/ad_dcloud_main_skip_bg.xml
+SHA1-Digest: 3s37lLDOhgKt5gefwRXRwKe8j+A=
+
+Name: res/drawable/ad_dcloud_main_skip_shape.xml
+SHA1-Digest: kqlLOwJiB3fTkG0TAnK0Lpt2DJs=
+
+Name: res/drawable/dcloud_about_buttons_bg.xml
+SHA1-Digest: PPRa6iXVl+JN4NBUkuD5dvQJSgA=
+
+Name: res/drawable/dcloud_about_buttons_button_bg.xml
+SHA1-Digest: UqdLaDiRTFoDvqFknVXGGTIHgxA=
+
+Name: res/drawable/dcloud_dialog_shape.xml
+SHA1-Digest: +H3A0Rs4S/5jSfme5tNYw8GeYTg=
+
+Name: res/drawable/dcloud_dialog_shape_bg.xml
+SHA1-Digest: aaxyeTuWL1CycqYNyo/CumLOm9A=
+
+Name: res/drawable/dcloud_image_pick_title_sel.xml
+SHA1-Digest: g6w8wf5saquiQqf4bg33FD6mqjo=
+
+Name: res/drawable/dcloud_longding_bg.xml
+SHA1-Digest: UF7dw8Ll52tzRMvz/MAGUfJVg5g=
+
+Name: res/drawable/dcloud_point_dd524d.xml
+SHA1-Digest: UEuvrj3s5DIMJymReMHWqCcfbnA=
+
+Name: res/drawable/dcloud_point_f32720.xml
+SHA1-Digest: jKrwaxLlE/nqlyzUGOW/f2xRb78=
+
+Name: res/drawable/dcloud_shortcut_guide_huawei.gif
+SHA1-Digest: dxiYX5FccsWNaPK+0weEkY+Ms/M=
+
+Name: res/drawable/dcloud_shortcut_guide_meizu.gif
+SHA1-Digest: GeSm5dWLinZkMi8YS2hN7EZPDcs=
+
+Name: res/drawable/dcloud_shortcut_guide_xiaomi.gif
+SHA1-Digest: X+C3FWUeleK96omyTywGiBaxM9w=
+
+Name: res/drawable/dcloud_slt_as_ios7_cancel_bt.xml
+SHA1-Digest: YigcVyERskqAmGSgsLPtBdJydZ0=
+
+Name: res/drawable/dcloud_slt_as_ios7_other_bt_bottom.xml
+SHA1-Digest: BqbQthGP5jISXCKaLfDCTIaIw44=
+
+Name: res/drawable/dcloud_slt_as_ios7_other_bt_middle.xml
+SHA1-Digest: F90M8eaUK+h8e9BEFpK3sNaPyOo=
+
+Name: res/drawable/dcloud_slt_as_ios7_other_bt_single.xml
+SHA1-Digest: YigcVyERskqAmGSgsLPtBdJydZ0=
+
+Name: res/drawable/dcloud_slt_as_ios7_other_bt_title.xml
+SHA1-Digest: 0JHZkUmaIn0AJYg0zvrcnxECcdE=
+
+Name: res/drawable/dcloud_slt_as_ios7_other_bt_top.xml
+SHA1-Digest: ZTNO4WNsVtpV31g6No4E3yVANFk=
+
+Name: res/drawable/dcloud_streamapp_about_first_start_short_cut_checkb
+ ox.xml
+SHA1-Digest: ehwmXyEtFnNp2rbvAtnKSNJNwDo=
+
+Name: res/drawable/dcloud_webview_activity_title_bg.xml
+SHA1-Digest: HAQRqsqrx3/878uh01riEjeymzA=
+
+Name: res/layout/ad_dcloud_main.xml
+SHA1-Digest: hGPF6V5aQbp4Sd8YTSfkvrA1vaM=
+
+Name: res/layout/ad_dcloud_splash.xml
+SHA1-Digest: GuuFnJI7CReA7bgA/ucrpObsClM=
+
+Name: res/layout/dcloud_activity_main_market.xml
+SHA1-Digest: 3vyHmHU5lJXCc9LvJweKQ1SGFLM=
+
+Name: res/layout/dcloud_custom_alert_dialog_layout.xml
+SHA1-Digest: pMdOGfV+wISBMyQu3LfH8NbiBws=
+
+Name: res/layout/dcloud_custom_notification.xml
+SHA1-Digest: y8DvPYDxUZts1E+nfJ6Gpa+TZbY=
+
+Name: res/layout/dcloud_custom_notification_dark.xml
+SHA1-Digest: nUmfCdAaRE7ds6B2RWtTQGM7vMs=
+
+Name: res/layout/dcloud_custom_notification_mi.xml
+SHA1-Digest: DLqnyKmrTliisuqh6QkUhFXDuhE=
+
+Name: res/layout/dcloud_custom_notification_transparent.xml
+SHA1-Digest: QFv19WifkaQ2VkracKVkqx5NfhA=
+
+Name: res/layout/dcloud_custom_notification_white.xml
+SHA1-Digest: gKn5KlJp/aeei1gOFPFnRVvjOuE=
+
+Name: res/layout/dcloud_dialog.xml
+SHA1-Digest: 8OfWWRBJNuWajzXj7UWp+Y8eCJI=
+
+Name: res/layout/dcloud_image_pick_gallery.xml
+SHA1-Digest: gpiQ8ZR+fiteE5YNDoB2nPGVgO8=
+
+Name: res/layout/dcloud_image_pick_gallery_item.xml
+SHA1-Digest: FeygyCg8hwdkA1vMP0ul7P0k/wU=
+
+Name: res/layout/dcloud_loadingview.xml
+SHA1-Digest: 6IHKXoM0/BbZcS/1VkWmamLssBQ=
+
+Name: res/layout/dcloud_main_test_activity.xml
+SHA1-Digest: 2AfVhG6+pElgoJKGqr03OvDfm7s=
+
+Name: res/layout/dcloud_market_fragment_base.xml
+SHA1-Digest: HNZ+Qvd2XnG6bwoVKPjrJLppCjA=
+
+Name: res/layout/dcloud_record_address.xml
+SHA1-Digest: DD0eg/FAD84mKa8dLNVreokT+mQ=
+
+Name: res/layout/dcloud_record_default.xml
+SHA1-Digest: z9byVWt8RKtdAeY86LTcO/8Rn7M=
+
+Name: res/layout/dcloud_shortcut_permission_guide_layout.xml
+SHA1-Digest: KjJMB0KqdiIpppD5n4So0x3qI+U=
+
+Name: res/layout/dcloud_snow_black_progress.xml
+SHA1-Digest: ySbtjOqWJkUmHuvuRjNfCs0XnXQ=
+
+Name: res/layout/dcloud_snow_white_progress.xml
+SHA1-Digest: QgXp695eCkr/OeHhdQDfHeW8T2A=
+
+Name: res/layout/dcloud_streamapp_custom_dialog_layout.xml
+SHA1-Digest: pMdOGfV+wISBMyQu3LfH8NbiBws=
+
+Name: res/layout/side_bar_layout.xml
+SHA1-Digest: 9sv0HZt1oQMDJoiDScI6bYuzOm0=
+
+Name: res/layout/webview_layout.xml
+SHA1-Digest: 2SRULTlmAaSC1Kq/jdcXgBkA4wk=
+
+Name: resources.arsc
+SHA1-Digest: nl1zgd+f9beWeO0uW9izfnAJtsI=
+

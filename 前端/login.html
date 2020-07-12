@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html class="ui-page-login mui-fullscreen">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<script type="text/javascript" src="js/md5.min.js"></script>
+		<style>
+			.ui-page-login,
+			body {
+				width: 100%;
+				height: 100%;
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			.mui-content {
+				height: 100%;
+				background-image: url(images/login_flower.jpg);
+			}
+			
+			.area {
+				margin: 20px auto 0px auto;
+			}
+			
+			.mui-input-group {
+				margin-top: 10px;
+			}
+			
+			.mui-input-group:first-child {
+				margin-top: 20px;
+			}
+			
+			.mui-input-group label {
+				width: 32%;
+				font-size: 18px;
+				font-family: "微软雅黑";
+			}
+			
+			.mui-input-row label~input,
+			.mui-input-row label~select,
+			.mui-input-row label~textarea {
+				width: 68%;
+			}
+			
+			.mui-card-content {
+				font-family: "微软雅黑";
+			}
+			
+			.mui-checkbox input[type=checkbox],
+			.mui-radio input[type=radio] {
+				top: 6px;
+			}
+			
+			.mui-content-padded {
+				margin-top: 25px;
+			}
+			
+			.mui-btn {
+				padding: 10px;
+			}
+			
+			.link-area {
+				display: block;
+				margin-top: 25px;
+				text-align: center;
+			}
+			
+			.spliter {
+				color: #bbb;
+				padding: 0px 8px;
+			}
+			
+			.oauth-area {
+				position: absolute;
+				bottom: 20px;
+				left: 0px;
+				text-align: center;
+				width: 100%;
+				padding: 0px;
+				margin: 0px;
+			}
+			
+			.oauth-area .oauth-btn {
+				display: inline-block;
+				width: 50px;
+				height: 50px;
+				background-size: 30px 30px;
+				background-position: center center;
+				background-repeat: no-repeat;
+				margin: 0px 20px;
+				/*-webkit-filter: grayscale(100%); */
+				border: solid 1px #ddd;
+				border-radius: 25px;
+			}
+			
+			.oauth-area .oauth-btn:active {
+				border: solid 1px #aaa;
+			}
+			
+			.oauth-area .oauth-btn.disabled {
+				background-color: #ddd;
+			}
+			
+			.pic {
+				width: 300px;
+			}
+			
+			.mui-bar {
+				filter: alpha(Opacity=50);
+				-moz-opacity: 0.7;
+				opacity: 0.7;
+			}
+			
+			.mui-card {
+				filter: alpha(Opacity=100);
+				-moz-opacity: 0.8;
+				opacity: 0.7;
+			}
+			
+			.mui-card-content-inner {
+				filter: alpha(Opacity=100);
+				-moz-opacity: 0.8;
+				opacity: 1;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<h1 class="mui-title">登录</h1>
+		</header>
+		<div class="mui-content">
+
+			<div class="mui-card">
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						<form id='login-form' class="mui-input-group">
+							<div class="mui-input-row">
+								<label>手机</label>
+								<input name="phone" id='phone' type="text" class="mui-input-clear mui-input" placeholder="请输入手机号">
+							</div>
+
+							<div class="mui-input-row">
+								<label>密码</label>
+								<input name="password" id='txt_password' type="password" class="mui-input-clear mui-input" placeholder="请输入密码">
+
+							</div>
+						</form>
+
+						<ul class="mui-table-view mui-table-view-chevron">
+							<li class="mui-table-view-cell">
+								<input id="auto_login" type="checkbox" />自动登录
+							</li>
+						</ul>
+
+						<div class="mui-content-padded">
+
+							<button id='login' class="mui-btn mui-btn-block mui-btn-green">登录</button>
+							<div class="link-area">
+								<a id='reg'>注册账号</a> <span class="spliter">|</span>
+								<a id='forgetPassword'>忘记密码</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="mui-content-padded oauth-area">
+
+			</div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script src="js/app.js"></script>
+		<script>
+			mui.plusReady(function() {
+				plus.navigator.setStatusBarBackground("#f391a9");
+				// 禁止返回到sub4页面
+				var backButtonPress = 0;
+				mui.back = function(event) {
+					backButtonPress++;
+					if(backButtonPress > 1) {
+						plus.runtime.quit();
+					} else {
+						plus.nativeUI.toast('再按一次退出应用');
+					}
+					setTimeout(function() {
+						backButtonPress = 0;
+					}, 1000);
+					return false;
+				};
+
+				document.getElementById("reg").addEventListener("tap", function() {
+					mui.openWindow("register.html", "register.html");
+				})
+
+				var userInfo = app.getUserGlobalInfo();
+				if(userInfo != null) {
+					// 与后端联调
+					mui.ajax(app.serverUrl + "/login", {
+						data: {
+							phone: userInfo.phone,
+							password: userInfo.password,
+						},
+						dataType: 'json', //服务器返回json格式数据
+						type: 'post', //HTTP请求类型
+						timeout: 10000, //超时时间设置为10秒；
+						headers: {
+							'Content-Type': 'application/json'
+						},
+						success: function(data) {
+							//服务器返回响应，根据响应结果，分析是否登录成功；
+							//								console.log(JSON.stringify(data));
+
+							phone.blur();
+							txt_password.blur();
+
+							if(data.status == 200) {
+								// 登录或者注册成功之后，保存全局用户对象到本地缓存
+								var userInfoJson = data.data;
+								app.setUserGlobalInfo(userInfoJson);
+								//
+								//userform.submit();
+								// 页面跳转
+								mui.openWindow({
+									url: "index.html",
+									id: 'index.html',
+									createNew: true
+								});
+							} else {
+								app.showToast(data.msg, "error");
+							}
+						}
+
+					});
+				}
+
+				//获取各种元素
+				var userform = document.getElementById("login-form");
+				var phone = document.getElementById("phone");
+				var txt_password = document.getElementById("txt_password");
+				var login_button = document.getElementById("login");
+				var auto_login = document.getElementById("auto_login");
+
+				var login_page=plus.webview.currentWebview();
+				//其他页面的phone信息
+				if(app.isNotNull(login_page.phone)){
+					phone.value=login_page.phone;
+				}
+				
+				//console.log(md5(txt_password.value));
+				//console.log(phone.value)
+				document.getElementById("forgetPassword").addEventListener("tap", function() {
+					// 打开忘记密码页面
+					mui.openWindow({
+						url: "forget_password.html",
+						id: "forget_password.html", // 每个朋友的聊天页面都是唯一对应的
+						extras: {
+							phone: phone.value
+						}
+					});
+				});
+
+				login_button.addEventListener("tap", function(e) {
+					// 判断用户名是否为空，如果为空则让其获得焦点
+					if(!app.isNotNull(phone.value)) {
+						// 获取焦点
+						phone.focus();
+						app.showToast("手机号不能为空", "error");
+					} else if(!app.isNotNull(txt_password.value)) {
+						// 获取焦点
+						txt_password.focus();
+						app.showToast("密码不能为空", "error");
+					} else {
+
+						// 判断用户名和密码的长度，进行限制
+						if(!(/^1(3|4|5|7|8)\d{9}$/.test(phone.value))) {
+							app.showToast("手机号错误", "error");
+						} else if(txt_password.value.length > 12) {
+							app.showToast("密码长度不能超过12", "error");
+						}
+						console.log(phone.value);
+						// 与后端联调
+						mui.ajax(app.serverUrl + "/login", {
+							data: {
+								phone: phone.value,
+								password: md5(txt_password.value),
+							},
+							dataType: 'json', //服务器返回json格式数据
+							type: 'post', //HTTP请求类型
+							timeout: 10000, //超时时间设置为10秒；
+							headers: {
+								'Content-Type': 'application/json'
+							},
+							success: function(data) {
+								//服务器返回响应，根据响应结果，分析是否登录成功；
+								//								console.log(JSON.stringify(data));
+
+								phone.blur();
+								txt_password.blur();
+
+								if(data.status == 200) {
+									// 登录或者注册成功之后，保存全局用户对象到本地缓存
+									var userInfoJson = data.data;
+
+									if(auto_login.checked) {
+										app.setUserGlobalInfo(userInfoJson);
+									}
+									//
+									//userform.submit();
+									// 页面跳转
+									mui.openWindow("index.html", "index.html");
+								} else {
+									app.showToast(data.msg, "error");
+								}
+							}
+
+						});
+
+					}
+
+					// 阻止默认事件，阻止默认表单提交
+					e.preventDefault();
+				});
+			})
+		</script>
+
+	</body>
+
+</html>

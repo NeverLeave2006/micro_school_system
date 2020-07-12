@@ -1,0 +1,58 @@
+
+
+spring:
+  datasource:
+    username: root
+    password: happy@heart
+    url: jdbc:mysql://127.0.0.1:3306/microschool?useLegacyDatetimeCode=false&serverTimezone=UTC&nullCatalogMeansCurrent=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #数据源类型
+    type: com.alibaba.druid.pool.DruidDataSource
+
+    initialSize: 5
+    minIdle: 10
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+    asyncInit: true
+
+logging:
+  level:
+    com:
+      sgj:
+        microschoolsystem:
+          mapper: debug
+          controller: debug
+
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mapperxml/*.xml
+
+# ===================================================================
+# 分布式文件系统FDFS配置
+# ===================================================================
+fdfs:
+  so-timeout: 30000
+  connect-timeout: 30000
+  thumb-image:             #缩略图生成参数
+    width: 100
+    height: 100
+  tracker-list:            #TrackerList参数,支持多个
+    - 119.23.239.232:22122
+
+#tomcat连接时长
+server:
+  connection-timeout: 180000
+  tomcat:
+    max-http-post-size: 67108864 #最大上传文件大小64M
+
+
+
+
+

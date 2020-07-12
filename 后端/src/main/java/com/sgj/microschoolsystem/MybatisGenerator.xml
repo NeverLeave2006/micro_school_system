@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+    PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+    "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <!--<classPathEntry location="/Program Files/IBM/SQLLIB/java/db2java.zip" />-->
+
+    <context id="Mybatis3Context" targetRuntime="MyBatis3Simple">
+        <property name="javaFileEncoding" value="UTF-8"/>
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/microschool?useLegacyDatetimeCode=false&amp;serverTimezone=UTC&amp;nullCatalogMeansCurrent=true"
+                        userId="root"
+                        password="happy@heart">
+        </jdbcConnection>
+
+
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <javaModelGenerator targetPackage="com.sgj.microschoolsystem.model" targetProject="D:/CodingPractise/IDEAJava/micro-school-system/src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="mapperxml" targetProject="D:/CodingPractise/IDEAJava/micro-school-system/src/main/resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.sgj.microschoolsystem.mapper" targetProject="D:/CodingPractise/IDEAJava/micro-school-system/src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+<!--        <table tableName="pyq"></table>-->
+<!--        <table tableName="chat_msg"></table>-->
+<!--        <table tableName="friends_request"></table>-->
+<!--        <table tableName="my_friends"></table>-->
+<!--        <table tableName="users"></table>-->
+        <table tableName="pageant_like"></table>
+
+
+
+
+    </context>
+</generatorConfiguration>

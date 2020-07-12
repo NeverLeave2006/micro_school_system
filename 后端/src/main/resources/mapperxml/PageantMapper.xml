@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sgj.microschoolsystem.mapper.PageantMapper">
+  <resultMap id="BaseResultMap" type="com.sgj.microschoolsystem.model.Pageant">
+    <!--@mbg.generated generated on Mon May 13 21:54:42 CST 2019.-->
+    <id column="poster" jdbcType="VARCHAR" property="poster" />
+    <result column="img" jdbcType="VARCHAR" property="img" />
+    <result column="like_count" jdbcType="INTEGER" property="likeCount" />
+    <result column="school_name" jdbcType="VARCHAR" property="schoolName" />
+  </resultMap>
+
+  <resultMap id="BaseResultMap2" type="com.sgj.microschoolsystem.model.bo.PageantListAll">
+    <!--@mbg.generated generated on Mon May 13 21:54:42 CST 2019.-->
+    <id column="poster" jdbcType="VARCHAR" property="poster" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="img" jdbcType="VARCHAR" property="img" />
+    <result column="like_count" jdbcType="INTEGER" property="likeCount" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated generated on Mon May 13 21:54:42 CST 2019.-->
+    delete from pageant
+    where poster = #{poster,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.sgj.microschoolsystem.model.Pageant">
+    <!--@mbg.generated generated on Mon May 13 21:54:42 CST 2019.-->
+    insert into pageant (poster, img, like_count, 
+      school_name)
+    values (#{poster,jdbcType=VARCHAR}, #{img,jdbcType=VARCHAR}, #{likeCount,jdbcType=INTEGER}, 
+      #{schoolName,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.sgj.microschoolsystem.model.Pageant">
+    <!--@mbg.generated generated on Mon May 13 21:54:42 CST 2019.-->
+    update pageant
+    set img = #{img,jdbcType=VARCHAR},
+      like_count = #{likeCount,jdbcType=INTEGER},
+      school_name = #{schoolName,jdbcType=VARCHAR}
+    where poster = #{poster,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated generated on Mon May 13 21:54:42 CST 2019.-->
+    select poster, img, like_count, school_name
+    from pageant
+    where poster = #{poster,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap2">
+    <!--@mbg.generated generated on Mon May 13 21:54:42 CST 2019.-->
+    select poster,users.username name, img, like_count
+    from pageant,users
+    where pageant.poster=users.id
+  </select>
+</mapper>

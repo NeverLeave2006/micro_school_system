@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/main.css" />
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+	</head>
+
+	<body class="mui-fullscreen">
+		<!--头部-->
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title" id="head">消息</h1>
+		</header>
+
+		<div class="mui-content" id="main">
+
+		</div>
+		<!--底部-->
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active" href="sub1.html" data-head="消息">
+				<span class="mui-icon mui-icon-chatbubble"></span>
+				<span class="mui-tab-label">消息</span>
+			</a>
+			<a class="mui-tab-item" href="sub2.html" data-head="通讯录">
+				<span class="mui-icon mui-icon-contact"></span>
+				<span class="mui-tab-label">通讯录</span>
+			</a>
+			<a class="mui-tab-item" href="sub3.html" data-head="发现">
+				<span class="mui-icon mui-icon-navigate"></span>
+				<span class="mui-tab-label">发现</span>
+			</a>
+			<a class="mui-tab-item" href="sub4.html" data-head="我">
+				<span class="mui-icon mui-icon-person"></span>
+				<span class="mui-tab-label">我</span>
+			</a>
+		</nav>
+		<script>
+			mui.init();
+			//mui加载完成事件
+			mui.plusReady(function() {
+				
+				mui.back=function(){
+					return false;
+				}
+				//设置导航栏颜色
+				plus.navigator.setStatusBarStyle("light");
+				plus.navigator.setStatusBarBackground("#000000");
+				//定义子页面数组
+				var subPages = ["sub1.html", "sub2.html", "sub3.html", "sub4.html"];
+				//获取主webView
+				var mainView = plus.webview.currentWebview();
+				//定义子页面显示位置样式
+				var subPageStyle = {
+					top: "44px", //距离顶部44px
+					bottom: "50px" //距离底部50px
+				};
+				
+				//遍历子页面数字
+				for(var i = 0; i < subPages.length; i++) {
+					var url = subPages[i];
+
+					//根据url创建每个子页面的webView
+					var subView = plus.webview.create(url, url, subPageStyle);
+					console.log("mark");
+					//默认设置每个子webView处于影藏状态
+					//为了主子webview同时显示，需要将每个子webView加入到主webView中
+					subView.show();//先显示
+					mainView.append(subView);
+					//subView.hide();不隐藏是为了sub2的height不为0
+				}
+				//默认设置sub1.html好友列表子页面显示
+				//根据id设置webview显示的语法plus.webview.show(id)；
+				plus.webview.show(subPages[0]);
+
+				//给每个导航栏目注册用户轻击
+				mui(".mui-bar-tab").on('tap', 'a', function() {
+					//设置当前导航对应的子页面显示，根据指定的id设置webView显示
+					var id = this.getAttribute("href");
+					var h = this.getAttribute("data-head");
+					plus.webview.show(id);
+					document.getElementById("head").innerHTML = h;
+				});
+
+			})
+		</script>
+	</body>
+
+</html>

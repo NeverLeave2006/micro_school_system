@@ -1,0 +1,120 @@
+{
+	"index.html": {
+		"resources": [
+			"sub1.html"
+		],
+		"refer": [
+			"sub4.html",
+			"sub3.html",
+			"sub2.html",
+			"sub1.html"
+		]
+	},
+	"sub1.html": {
+		"refer": [
+			"sub1/chat.html",
+			"chatting.html"
+		],
+		"resources": []
+	},
+	"sub3.html": {
+		"resources": [
+			"/css/mui.min.css",
+			"tab-top-subpage-1.html"
+		],
+		"refer": [
+			"tab-top-subpage-2.html",
+			"tab-top-subpage-3.html",
+			"tab-top-subpage-1.html",
+			"searchFriends.html",
+			"scanme.html",
+			"pyq.html",
+			"flea_market.html",
+			"pageant.html",
+			"event.html"
+		]
+	},
+	"login.html": {
+		"refer": [
+			"main.html",
+			"index.html",
+			"reg.html",
+			"register.html",
+			"forget_password.html"
+		],
+		"resources": [
+			"images/login_flower.jpg"
+		]
+	},
+	"sub4.html": {
+		"refer": [
+			"myface.html",
+			"mynickname.html",
+			"myQRCode.html",
+			"login.html"
+		],
+		"resources": []
+	},
+	"myface.html": {
+		"refer": [
+			"plugin/v3.1.6/myface-uploader.html"
+		],
+		"resources": []
+	},
+	"plugin/v3.1.6/myface-uploader.html": {
+		"resources": [
+			"plugin/v3.1.6/css/main.css"
+		],
+		"refer": []
+	},
+	"register.html": {
+		"refer": [
+			"login.html"
+		],
+		"resources": []
+	},
+	"searchFriends.html": {
+		"refer": [
+			"searchFriendsResult.html"
+		],
+		"resources": []
+	},
+	"scanme.html": {
+		"refer": [
+			"searchFriendsResult.html"
+		],
+		"resources": []
+	},
+	"sub2.html": {
+		"refer": [
+			"chatting.html"
+		],
+		"resources": []
+	},
+	"pyq.html": {
+		"refer": [
+			"post_pyq.html"
+		],
+		"resources": []
+	},
+	"flea_market.html": {
+		"refer": [
+			"post_market.html"
+		]
+	},
+	"forget_password.html": {
+		"refer": [
+			"login.html"
+		]
+	},
+	"pageant.html": {
+		"refer": [
+			"post_selfile.html"
+		]
+	},
+	"event.html": {
+		"refer": [
+			"post_event.html"
+		]
+	}
+}

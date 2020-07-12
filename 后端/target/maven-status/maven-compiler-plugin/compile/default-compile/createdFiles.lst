@@ -1,0 +1,4 @@
+com\sgj\microschoolsystem\model\Pyq.class
+com\sgj\microschoolsystem\model\bo\PyqRequest.class
+com\sgj\microschoolsystem\controller\PyqController.class
+com\sgj\microschoolsystem\mapper\PyqMapper.class

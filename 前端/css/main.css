@@ -1,0 +1,10 @@
+*{
+	border: 0;
+	padding: 0;
+}
+.mui-bar-nav{
+	background-color: #000000;
+}
+.mui-bar-nav a,.mui-title{
+	color: #FFFFFF;
+}
